@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Age</title>
+</head>
+<script>
+    function calculateAge(birthYear,currentYear){
+        let birth=Number(birthYear)
+        let current=Number(currentYear)
+
+        if(isNaN(birth) || isNaN(current)){
+            return "invalid input"
+        }
+
+        if(birth>current){
+            return "birth year cannot be greater then current year";
+        }
+        let age=current-birth;
+        return `Your age ${age} Years old`;
+    }
+    console.log(calculateAge(1990, 2024)); 
+    console.log(calculateAge(2000, 1995));
+    console.log(calculateAge(1995, "2024"));
+    console.log(calculateAge("1995", 2024));
+    console.log(calculateAge("abcd", "xyz"));  
+</script>
+</html>
